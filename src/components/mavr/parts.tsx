@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import logo from "@/assets/mavr-logo.png";
 
 /* ---------------- Reveal on scroll ---------------- */
-export function Reveal({ children, delay = 0, as: As = "div", className = "" }: { children: ReactNode; delay?: number; as?: any; className?: string }) {
+export function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = ref.current; if (!el) return;
@@ -11,7 +11,7 @@ export function Reveal({ children, delay = 0, as: As = "div", className = "" }: 
     }, { threshold: 0.15 });
     io.observe(el); return () => io.disconnect();
   }, [delay]);
-  return <As ref={ref} className={`reveal ${className}`}>{children}</As>;
+  return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }
 
 /* ---------------- Navbar ---------------- */
