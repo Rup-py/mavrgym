@@ -81,11 +81,7 @@ function BlurText({ text, className = "" }: { text: string; className?: string }
   const inView = useInView(ref, { amount: 0.1, once: true });
   const words = text.split(" ");
   return (
-    <p
-      ref={ref}
-      className={className}
-      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", rowGap: "0.1em" }}
-    >
+    <p ref={ref} className={className} style={{ textAlign: "center" }}>
       {words.map((w, i) => (
         <motion.span
           key={i}
@@ -100,7 +96,7 @@ function BlurText({ text, className = "" }: { text: string; className?: string }
               : {}
           }
           transition={{ duration: 0.7, times: [0, 0.5, 1], ease: "easeOut", delay: (i * 100) / 1000 }}
-          style={{ display: "inline-block", marginRight: "0.28em" }}
+          style={{ display: "inline-block", marginRight: "0.25em" }}
         >
           {w}
         </motion.span>
@@ -193,28 +189,27 @@ export function CinematicHero() {
       {/* Background video */}
       <FadingVideo
         src={HERO_VIDEO}
-        className="absolute left-1/2 top-0 -translate-x-1/2 object-cover object-top z-0"
-        style={{ width: "120%", height: "120%" }}
+        className="absolute left-1/2 top-0 -translate-x-1/2 object-cover object-center z-0 h-full w-full md:h-[120%] md:w-[120%] md:object-top"
       />
-      {/* Subtle vignette for readability */}
-      <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%)" }} />
+      {/* Stronger vignette on mobile for readability */}
+      <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.85) 100%)" }} />
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Hero content */}
-        <div className="flex-1 flex flex-col items-center text-center pt-28 md:pt-32 px-4">
+        <div className="flex-1 flex flex-col items-center text-center pt-24 sm:pt-28 md:pt-32 px-4 pb-10">
           {/* Badge */}
-          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}>
-            <div className="liquid-glass rounded-full pl-1 pr-3 py-1 flex items-center gap-2">
-              <span className="bg-white text-black rounded-full px-3 py-1 text-xs font-semibold font-body-barlow">New</span>
-              <span className="text-sm text-white/90 font-body-barlow">India's Athlete Operating System — Est. 2025</span>
+          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }} className="max-w-full">
+            <div className="liquid-glass rounded-full pl-1 pr-3 py-1 flex items-center gap-2 flex-wrap justify-center">
+              <span className="bg-white text-black rounded-full px-3 py-1 text-[11px] sm:text-xs font-semibold font-body-barlow">New</span>
+              <span className="text-[11px] sm:text-sm text-white/90 font-body-barlow text-center">India's Athlete Operating System — Est. 2025</span>
             </div>
           </motion.div>
 
           {/* Headline */}
-          <div className="mt-6">
+          <div className="mt-6 w-full">
             <BlurText
               text="THE SYSTEM IS LOADING."
-              className="font-serif-i text-white leading-[0.85] tracking-[-3px] text-5xl md:text-7xl lg:text-[5.5rem] max-w-3xl"
+              className="font-serif-i text-white leading-[0.9] tracking-tight md:tracking-[-3px] text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] max-w-3xl mx-auto"
             />
           </div>
 
@@ -222,7 +217,7 @@ export function CinematicHero() {
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.8 }}
-            className="mt-4 text-sm md:text-base text-white max-w-2xl font-body-barlow font-light leading-snug px-4"
+            className="mt-4 text-sm md:text-base text-white max-w-2xl font-body-barlow font-light leading-snug px-2"
           >
             Training. Nutrition. Coach Connect. Achievements. Community. One platform built entirely for the Indian athlete.
           </motion.p>
@@ -231,7 +226,7 @@ export function CinematicHero() {
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.7, ease: "easeOut", delay: 1.1 }}
-            className="flex items-center gap-6 mt-7"
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-7"
           >
             <a
               href="#waitlist-final"
@@ -254,16 +249,16 @@ export function CinematicHero() {
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.7, ease: "easeOut", delay: 1.3 }}
-            className="flex items-stretch gap-4 mt-8 flex-wrap justify-center"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 w-full max-w-[480px]"
           >
-            <div className="liquid-glass p-5 w-[220px] rounded-[1.25rem] text-left">
+            <div className="liquid-glass p-5 rounded-[1.25rem] text-left">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" strokeLinecap="round" /></svg>
               <div className="font-serif-i text-white text-4xl tracking-[-1px] leading-none mt-3">
                 <Counter to={847} />+
               </div>
               <div className="text-xs text-white font-body-barlow font-light mt-2">Founding Athletes Joined</div>
             </div>
-            <div className="liquid-glass p-5 w-[220px] rounded-[1.25rem] text-left">
+            <div className="liquid-glass p-5 rounded-[1.25rem] text-left">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
               <div className="font-serif-i text-white text-4xl tracking-[-1px] leading-none mt-3">1.4B+</div>
               <div className="text-xs text-white font-body-barlow font-light mt-2">Indians. One System. Built for All.</div>
@@ -271,9 +266,9 @@ export function CinematicHero() {
           </motion.div>
 
           {/* Waitlist inline */}
-          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 1.35 }} className="mt-8 w-full flex flex-col items-center gap-3 px-4">
+          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 1.35 }} className="mt-8 w-full flex flex-col items-center gap-3 px-2">
             <WaitlistForm />
-            <div className="text-[11px] text-white/70 font-body-barlow">No spam. No noise. Only updates that matter.</div>
+            <div className="text-[11px] text-white/70 font-body-barlow text-center">No spam. No noise. Only updates that matter.</div>
             <ShareRow />
           </motion.div>
         </div>
@@ -284,19 +279,11 @@ export function CinematicHero() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 1.4 }}
           className="flex flex-col items-center gap-4 pb-10 px-4"
         >
-          <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body-barlow">
+          <div className="liquid-glass rounded-full px-3.5 py-1 text-[11px] sm:text-xs font-medium text-white font-body-barlow text-center">
             Built for India's Athletes, Trainers, and Champions
           </div>
-          <div className="flex items-center justify-center flex-wrap gap-8 md:gap-16 font-serif-i text-white text-2xl md:text-3xl tracking-tight">
-            <span>Train</span>
-            <span>·</span>
-            <span>Track</span>
-            <span>·</span>
-            <span>Coach</span>
-            <span>·</span>
-            <span>Compete</span>
-            <span>·</span>
-            <span>Dominate</span>
+          <div className="flex items-center justify-center flex-wrap gap-4 sm:gap-8 md:gap-16 font-serif-i text-white text-xl sm:text-2xl md:text-3xl tracking-tight">
+            <span>Train</span><span>·</span><span>Track</span><span>·</span><span>Coach</span><span>·</span><span>Compete</span><span>·</span><span>Dominate</span>
           </div>
         </motion.div>
       </div>
