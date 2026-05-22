@@ -2,9 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/mavr-logo.png";
 import {
-  Navbar, Countdown, WaitlistForm, Counter, Ticker, ShareRow,
+  WaitlistForm, Ticker, ShareRow,
   Reveal, InvestorModal, CookieBanner, track,
 } from "@/components/mavr/parts";
+import { CinematicNavbar, CinematicHero } from "@/components/mavr/hero-cinematic";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,38 +46,10 @@ function Index() {
 
   return (
     <main id="top" className="bg-[#0A0A0A] text-white overflow-x-hidden">
-      <Navbar onJoin={scrollToWaitlist} />
+      <CinematicNavbar onJoin={scrollToWaitlist} />
 
-      {/* HERO */}
-      <section className="relative min-h-screen pt-24 pb-16 px-6 grain overflow-hidden">
-        <div className="absolute inset-x-0 bottom-0 h-[60vh] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(204,0,0,0.10), transparent 60%)" }} />
-        <div className="relative max-w-5xl mx-auto flex flex-col items-center text-center pt-10">
-          <img src={logo} alt="MAVR Logo" className="h-20 md:h-24 w-auto mb-8 animate-in fade-in duration-500" />
-          <div className="overline mb-6 animate-in fade-in slide-in-from-bottom-2 duration-700">INDIA'S ATHLETE OPERATING SYSTEM — EST. 2025</div>
-          <h1 className="font-display text-[48px] md:text-[88px] lg:text-[108px] leading-[0.95] text-white animate-in fade-in slide-in-from-bottom-4 duration-700">
-            THE SYSTEM<br />
-            <span className="inline-flex items-end justify-center">IS LOADING.<span className="caret h-[0.9em] ml-2" /></span>
-          </h1>
-          <p className="text-[#888] text-base md:text-lg max-w-xl mt-6 animate-in fade-in duration-1000">
-            Training. Nutrition. Coach Connect. Achievements. Community. One platform built entirely for the Indian athlete.
-          </p>
-
-          <div className="mt-10 w-full animate-in fade-in duration-1000">
-            <div className="text-[11px] tracking-[0.3em] text-[#888] mb-3">PUBLIC LAUNCH IN</div>
-            <Countdown />
-          </div>
-
-          <div className="mt-10 w-full flex flex-col items-center gap-4 animate-in fade-in duration-1000">
-            <WaitlistForm />
-            <div className="text-[11px] text-[#888]">No spam. No noise. Only updates that matter.</div>
-            <div className="flex items-center gap-2 text-sm text-[#888]">
-              <span className="pulse-dot" />
-              <span><span className="text-white font-medium"><Counter to={847} /></span> athletes already on the waitlist</span>
-            </div>
-            <ShareRow />
-          </div>
-        </div>
-      </section>
+      {/* HERO — Cinematic */}
+      <CinematicHero />
 
       <Ticker />
 
