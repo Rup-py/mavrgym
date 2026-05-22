@@ -81,31 +81,40 @@ function Index() {
       </Section>
 
       {/* SECTION 3 — FEATURES */}
-      <Section id="ecosystem" alt>
-        <Reveal><Overline>THE PLATFORM</Overline></Reveal>
-        <Reveal delay={100}><H2>Everything an Indian Athlete Actually Needs.</H2></Reveal>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-          {[
-            ["DASHBOARD", "Live date, time, trainer tag, current streak, today's workout card, macro summary. Your entire athletic life visible in one glance."],
-            ["WORKOUT TRACKING", "Log every set, every rep, every weight. Personal records detected automatically. Achievement unlocked the moment you break your own record."],
-            ["INDIAN DIET TRACKING", "Dal makhani. Paneer bhurji. Poha. Buttermilk. A food database built for India — not a Western database with Indian items reluctantly added as an afterthought."],
-            ["ACHIEVEMENTS & BADGES", "30+ achievements across Bronze, Silver, Gold, Platinum, and Diamond tiers. Every milestone triggers a fullscreen celebration. Because discipline deserves to feel like a win."],
-            ["SUPERPOWERS", "Elite subscribers unlock Superpowers — XP Booster, Stealth Mode, Nutrition Oracle, Recovery Advisor, Iron Memory. Real competitive advantages, not cosmetic bonuses."],
-            ["SMART WATCH SYNC", "Connect Apple Watch, WearOS, or Fitbit. Heart rate, calories, active minutes, and workout detection flow directly into your MAVR session in real time."],
-            ["MAVR ID SOCIAL LAYER", "Every athlete gets a unique identity: MAVR_IronWolf2847. Send partner requests, chat, co-plan sessions, share workout activity. Instagram mechanics built for the gym."],
-            ["REAL-TIME TRAINER EDIT", "A trainer edits your workout plan. You see it update live — no refresh, no reload, no delay. WebSocket sync in under 500ms. The future of coach-athlete communication."],
-            ["PRIVACY AND SAFETY", "Granular privacy controls. Block and unblock any user. AES-256 encrypted chat. You decide who sees your workouts, your stats, your check-ins. Your data, your rules."],
-          ].map(([t, b], i) => (
-            <Reveal key={t} delay={(i % 3) * 100}>
-              <div className="mavr-card p-6 h-full hover:border-[#CC0000]/50 hover:-translate-y-1 transition-all duration-300 group">
-                <div className="font-mono text-xs text-[#CC0000] mb-3">0{i + 1}</div>
-                <h3 className="font-display text-2xl mb-3 group-hover:text-[#CC0000] transition-colors">{t}</h3>
-                <p className="text-[#888] text-sm leading-relaxed">{b}</p>
-              </div>
-            </Reveal>
-          ))}
+      <section id="ecosystem" className="relative w-full py-24 md:py-32 px-6 overflow-hidden bg-[#050505]">
+        <video
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_182501_0216c2be-1b2f-40d3-8716-0d4f42e73b44.mp4"
+          autoPlay muted loop playsInline preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+        />
+        <div className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-b from-[#050505] via-[#050505]/60 to-[#050505]" />
+        <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(5,5,5,0.85)_75%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <Reveal><Overline>THE PLATFORM</Overline></Reveal>
+          <Reveal delay={100}><H2>Everything an Indian Athlete Actually Needs.</H2></Reveal>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+            {[
+              ["DASHBOARD", "Live date, time, trainer tag, current streak, today's workout card, macro summary. Your entire athletic life visible in one glance."],
+              ["WORKOUT TRACKING", "Log every set, every rep, every weight. Personal records detected automatically. Achievement unlocked the moment you break your own record."],
+              ["INDIAN DIET TRACKING", "Dal makhani. Paneer bhurji. Poha. Buttermilk. A food database built for India — not a Western database with Indian items reluctantly added as an afterthought."],
+              ["ACHIEVEMENTS & BADGES", "30+ achievements across Bronze, Silver, Gold, Platinum, and Diamond tiers. Every milestone triggers a fullscreen celebration. Because discipline deserves to feel like a win."],
+              ["SUPERPOWERS", "Elite subscribers unlock Superpowers — XP Booster, Stealth Mode, Nutrition Oracle, Recovery Advisor, Iron Memory. Real competitive advantages, not cosmetic bonuses."],
+              ["SMART WATCH SYNC", "Connect Apple Watch, WearOS, or Fitbit. Heart rate, calories, active minutes, and workout detection flow directly into your MAVR session in real time."],
+              ["MAVR ID SOCIAL LAYER", "Every athlete gets a unique identity: MAVR_IronWolf2847. Send partner requests, chat, co-plan sessions, share workout activity. Instagram mechanics built for the gym."],
+              ["REAL-TIME TRAINER EDIT", "A trainer edits your workout plan. You see it update live — no refresh, no reload, no delay. WebSocket sync in under 500ms. The future of coach-athlete communication."],
+              ["PRIVACY AND SAFETY", "Granular privacy controls. Block and unblock any user. AES-256 encrypted chat. You decide who sees your workouts, your stats, your check-ins. Your data, your rules."],
+            ].map(([t, b], i) => (
+              <Reveal key={t} delay={(i % 3) * 100}>
+                <div className="mavr-card p-6 h-full hover:border-[#CC0000]/50 hover:-translate-y-1 transition-all duration-300 group bg-[#0A0A0A]/70 backdrop-blur-md">
+                  <div className="font-mono text-xs text-[#CC0000] mb-3">0{i + 1}</div>
+                  <h3 className="font-display text-2xl mb-3 group-hover:text-[#CC0000] transition-colors">{t}</h3>
+                  <p className="text-[#888] text-sm leading-relaxed">{b}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* SECTION 4 — MAVR ID */}
       <Section>
