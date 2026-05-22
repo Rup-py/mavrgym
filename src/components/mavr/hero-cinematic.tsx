@@ -81,11 +81,7 @@ function BlurText({ text, className = "" }: { text: string; className?: string }
   const inView = useInView(ref, { amount: 0.1, once: true });
   const words = text.split(" ");
   return (
-    <p
-      ref={ref}
-      className={className}
-      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", rowGap: "0.1em" }}
-    >
+    <p ref={ref} className={className} style={{ textAlign: "center" }}>
       {words.map((w, i) => (
         <motion.span
           key={i}
@@ -100,7 +96,7 @@ function BlurText({ text, className = "" }: { text: string; className?: string }
               : {}
           }
           transition={{ duration: 0.7, times: [0, 0.5, 1], ease: "easeOut", delay: (i * 100) / 1000 }}
-          style={{ display: "inline-block", marginRight: "0.28em" }}
+          style={{ display: "inline-block", marginRight: "0.25em" }}
         >
           {w}
         </motion.span>
