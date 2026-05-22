@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/mavr-logo.png";
 import {
-  Countdown, WaitlistForm, Counter, Ticker, ShareRow,
+  WaitlistForm, Ticker, ShareRow,
   Reveal, InvestorModal, CookieBanner, track,
 } from "@/components/mavr/parts";
 import { CinematicNavbar, CinematicHero } from "@/components/mavr/hero-cinematic";
