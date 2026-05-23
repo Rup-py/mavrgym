@@ -58,6 +58,12 @@ function Index() {
       <Ticker />
 
       {/* SECTION 2 — WHAT IS MAVR */}
+      <Ticker />
+
+      {/* PROBLEM */}
+      <ProblemSection />
+
+      {/* SECTION 2 — WHAT IS MAVR */}
       <Section id="about">
         <Reveal><Overline>THE ECOSYSTEM</Overline></Reveal>
         <Reveal delay={100}><H2>One System. Three Pillars.</H2></Reveal>
