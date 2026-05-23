@@ -58,8 +58,6 @@ function Index() {
       <Ticker />
 
       {/* SECTION 2 — WHAT IS MAVR */}
-      <Ticker />
-
       {/* PROBLEM */}
       <ProblemSection />
 
