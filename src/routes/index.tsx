@@ -6,6 +6,10 @@ import {
   Reveal, InvestorModal, CookieBanner, track,
 } from "@/components/mavr/parts";
 import { CinematicNavbar, CinematicHero } from "@/components/mavr/hero-cinematic";
+import {
+  ProblemSection, FoodSearchSection, CalculatorSection,
+  LeaderboardSection, TrainerSection, BetaSection, FAQSection, PressSection,
+} from "@/components/mavr/sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
