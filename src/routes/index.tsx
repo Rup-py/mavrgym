@@ -177,6 +177,12 @@ function Index() {
         </div>
       </Section>
 
+      {/* FOOD DATABASE — interactive */}
+      <FoodSearchSection />
+
+      {/* CALCULATOR — interactive */}
+      <CalculatorSection />
+
       {/* SECTION 5 — ACHIEVEMENTS */}
       <Section alt>
         <Reveal><Overline>THE ACHIEVEMENT ENGINE</Overline></Reveal>
