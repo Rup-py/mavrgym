@@ -314,6 +314,9 @@ function Index() {
         </Reveal>
       </Section>
 
+      {/* LEADERBOARD */}
+      <LeaderboardSection />
+
       {/* SECTION 8 — MARKET */}
       <Section id="investors" className="overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-1/2 pointer-events-none" style={{ background: "radial-gradient(ellipse at 0% 50%, rgba(204,0,0,0.08), transparent 60%)" }} />
