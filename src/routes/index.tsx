@@ -6,6 +6,10 @@ import {
   Reveal, InvestorModal, CookieBanner, track,
 } from "@/components/mavr/parts";
 import { CinematicNavbar, CinematicHero } from "@/components/mavr/hero-cinematic";
+import {
+  ProblemSection, FoodSearchSection, CalculatorSection,
+  LeaderboardSection, TrainerSection, BetaSection, FAQSection, PressSection,
+} from "@/components/mavr/sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,6 +56,10 @@ function Index() {
       <CinematicHero />
 
       <Ticker />
+
+      {/* SECTION 2 — WHAT IS MAVR */}
+      {/* PROBLEM */}
+      <ProblemSection />
 
       {/* SECTION 2 — WHAT IS MAVR */}
       <Section id="about">
@@ -168,6 +176,12 @@ function Index() {
           </Reveal>
         </div>
       </Section>
+
+      {/* FOOD DATABASE — interactive */}
+      <FoodSearchSection />
+
+      {/* CALCULATOR — interactive */}
+      <CalculatorSection />
 
       {/* SECTION 5 — ACHIEVEMENTS */}
       <Section alt>
@@ -300,6 +314,9 @@ function Index() {
         </Reveal>
       </Section>
 
+      {/* LEADERBOARD */}
+      <LeaderboardSection />
+
       {/* SECTION 8 — MARKET */}
       <Section id="investors" className="overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-1/2 pointer-events-none" style={{ background: "radial-gradient(ellipse at 0% 50%, rgba(204,0,0,0.08), transparent 60%)" }} />
@@ -392,6 +409,18 @@ function Index() {
           ))}
         </div>
       </Section>
+
+      {/* TRAINER SIGNUP */}
+      <TrainerSection />
+
+      {/* CLOSED BETA */}
+      <BetaSection />
+
+      {/* FAQ */}
+      <FAQSection />
+
+      {/* PRESS & MEDIA */}
+      <PressSection />
 
       {/* SECTION 10 — FINAL WAITLIST */}
       <section id="waitlist-final" className="relative py-28 md:py-40 px-6" style={{ background: "radial-gradient(ellipse at center, rgba(180,0,0,0.18), #0A0A0A 70%)" }}>

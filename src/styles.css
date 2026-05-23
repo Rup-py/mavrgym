@@ -133,6 +133,44 @@
 .mavr-card { background:#111111; border:1px solid #1A1A1A; border-radius:4px; }
 .mavr-card-top { border-top: 3px solid #CC0000; }
 
+/* Form inputs */
+.mavr-input {
+  width: 100%;
+  background: #0A0A0A;
+  border: 1px solid #2A2A2A;
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color .2s ease;
+}
+.mavr-input::placeholder { color: #555; }
+.mavr-input:focus { outline: none; border-color: #CC0000; }
+.mavr-input option { background:#0A0A0A; }
+
+/* Range slider */
+.mavr-range {
+  -webkit-appearance: none; appearance: none;
+  height: 4px; background: #1A1A1A; border-radius: 999px; outline: none;
+}
+.mavr-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: linear-gradient(135deg,#CC0000,#FF4444);
+  cursor: pointer; box-shadow: 0 0 12px rgba(204,0,0,0.6);
+  border: 2px solid #0A0A0A;
+}
+.mavr-range::-moz-range-thumb {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: linear-gradient(135deg,#CC0000,#FF4444);
+  cursor: pointer; box-shadow: 0 0 12px rgba(204,0,0,0.6);
+  border: 2px solid #0A0A0A;
+}
+
+@keyframes fade-in { from { opacity:0; transform:translateY(8px);} to {opacity:1; transform:translateY(0);} }
+.animate-fade-in { animation: fade-in .5s ease-out both; }
+
 /* Custom crosshair cursor (desktop) */
 @media (hover:hover) and (pointer:fine) {
   body { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><circle cx='10' cy='10' r='2' fill='%23CC0000'/><line x1='10' y1='0' x2='10' y2='6' stroke='%23CC0000' stroke-width='1'/><line x1='10' y1='14' x2='10' y2='20' stroke='%23CC0000' stroke-width='1'/><line x1='0' y1='10' x2='6' y2='10' stroke='%23CC0000' stroke-width='1'/><line x1='14' y1='10' x2='20' y2='10' stroke='%23CC0000' stroke-width='1'/></svg>") 10 10, crosshair; }
