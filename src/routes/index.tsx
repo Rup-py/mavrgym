@@ -410,6 +410,18 @@ function Index() {
         </div>
       </Section>
 
+      {/* TRAINER SIGNUP */}
+      <TrainerSection />
+
+      {/* CLOSED BETA */}
+      <BetaSection />
+
+      {/* FAQ */}
+      <FAQSection />
+
+      {/* PRESS & MEDIA */}
+      <PressSection />
+
       {/* SECTION 10 — FINAL WAITLIST */}
       <section id="waitlist-final" className="relative py-28 md:py-40 px-6" style={{ background: "radial-gradient(ellipse at center, rgba(180,0,0,0.18), #0A0A0A 70%)" }}>
         <div className="max-w-4xl mx-auto text-center">
