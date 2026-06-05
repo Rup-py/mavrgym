@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useInView } from "framer-motion";
 import logo from "@/assets/mavr-logo.png";
-import { Countdown, WaitlistForm, Counter, ShareRow } from "@/components/mavr/parts";
+import { WaitlistForm, Counter, ShareRow } from "@/components/mavr/parts";
 
 /* ---------------- FadingVideo (rAF crossfade) ---------------- */
 const FADE_MS = 500;
