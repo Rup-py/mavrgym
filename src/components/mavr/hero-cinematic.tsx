@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useInView } from "framer-motion";
 import logo from "@/assets/mavr-logo.png";
-import { Countdown, WaitlistForm, Counter, ShareRow } from "@/components/mavr/parts";
+import { WaitlistForm, Counter, ShareRow } from "@/components/mavr/parts";
 
 /* ---------------- FadingVideo (rAF crossfade) ---------------- */
 const FADE_MS = 500;
@@ -219,7 +219,7 @@ export function CinematicHero() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.8 }}
             className="mt-4 text-sm md:text-base text-white max-w-2xl font-body-barlow font-light leading-snug px-2"
           >
-            Training. Nutrition. Coach Connect. Achievements. Community. One platform built entirely for the Indian athlete.
+            Every fitness app was built for someone else. Not your food. Not your trainer. Not your gym. MAVR is India's athlete operating system — built entirely for the serious Indian athlete.
           </motion.p>
 
           {/* CTAs */}
@@ -239,11 +239,6 @@ export function CinematicHero() {
             </a>
           </motion.div>
 
-          {/* Countdown */}
-          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 1.2 }} className="mt-10 w-full">
-            <div className="text-[11px] tracking-[0.3em] text-white/70 mb-3 font-body-barlow">PUBLIC LAUNCH IN</div>
-            <Countdown />
-          </motion.div>
 
           {/* Stats row */}
           <motion.div

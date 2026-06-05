@@ -19,14 +19,14 @@ function Section({ id, alt, children, className = "" }: { id?: string; alt?: boo
 /* ============ 1. PROBLEM STATS ============ */
 export function ProblemSection() {
   const stats = [
-    ["87%", "of Indian gym-goers cannot accurately track what they eat — because no fitness app has dal, paneer, or poha in its database with correct macros."],
+    ["87%", "of Indian gym-goers cannot accurately track what they eat — because every fitness app was built for Western diets, not dal, paneer, or poha."],
     ["5 Cr+", "active gym-goers in India managed by trainers using WhatsApp voice notes, paper registers, and verbal instructions. No tracking. No data. No system."],
     ["₹0", "spent building a fitness platform from scratch specifically for the Indian athlete — until now. MAVR is the first."],
   ];
   return (
     <Section alt id="problem">
       <Reveal><Overline>THE PROBLEM</Overline></Reveal>
-      <Reveal delay={100}><H2>India Has 5 Crore Gym-Goers.<br/>Zero Platforms Built For Them.</H2></Reveal>
+      <Reveal delay={100}><H2>India Has 5 Crore Gym-Goers.<br/>One Fitness App Built Entirely For Them.</H2></Reveal>
       <div className="mt-12 space-y-5">
         {stats.map(([n, d], i) => (
           <Reveal key={n} delay={i * 120}>
@@ -95,7 +95,7 @@ export function FoodSearchSection() {
   return (
     <Section alt id="food">
       <Reveal><Overline>THE FOOD DATABASE</Overline></Reveal>
-      <Reveal delay={100}><H2>Search the Database. Right Now.</H2></Reveal>
+      <Reveal delay={100}><H2>India's Largest Indian Food Calorie and Macro Tracker</H2></Reveal>
       <Reveal delay={200}>
         <p className="text-[#888] max-w-2xl text-base md:text-lg mb-10">
           Type any Indian food below and see exactly what MAVR shows your athletes. Dal makhani. Poha. Butter chicken. Protein shake. It is all here. This is not a demo — this is the real database.
@@ -348,7 +348,7 @@ export function TrainerSection() {
   return (
     <Section id="trainers">
       <Reveal><Overline>FOR TRAINERS</Overline></Reveal>
-      <Reveal delay={100}><H2>Are You a Trainer?<br/>MAVR Was Built for You Too.</H2></Reveal>
+      <Reveal delay={100}><H2>Fitness App for Personal Trainers in India —<br/>Manage Students in Real Time.</H2></Reveal>
       <Reveal delay={200}>
         <p className="text-[#888] max-w-2xl text-base md:text-lg mb-12">
           Coach Connect gives you a real-time dashboard to manage every student — assign plans, track diet compliance, monitor streaks, and edit programmes live. Your students see your changes instantly. The first 3 months are free.

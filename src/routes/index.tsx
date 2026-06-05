@@ -15,15 +15,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "MAVR — India's First Athlete Operating System" },
-      { name: "description", content: "MAVR is India's first complete athlete operating system. Track workouts, nutrition, connect with coaches, and earn achievements. Join the waitlist now." },
-      { name: "keywords", content: "Indian fitness app, athlete tracking app India, gym tracking app, trainer student app India, fitness app India" },
-      { property: "og:title", content: "MAVR — Train. Track. Dominate." },
-      { property: "og:description", content: "India's first athlete operating system is loading. Join 1,000 founding athletes." },
+      { name: "description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for. Track macros for dal, paneer, poha. Join 847+ athletes today." },
+      { name: "keywords", content: "fitness app India, Indian food macro tracker, personal trainer app India, workout tracking app, athlete operating system" },
+      { property: "og:title", content: "MAVR — India's First Athlete Operating System" },
+      { property: "og:description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://mavr.in" },
+      { property: "og:image", content: "https://www.mavr.in/assets/og-banner.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MAVR — Train. Track. Dominate." },
-      { name: "twitter:description", content: "India's first athlete operating system is loading." },
+      { name: "twitter:title", content: "MAVR — India's First Athlete Operating System" },
+      { name: "twitter:description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for." },
+      { name: "twitter:image", content: "https://www.mavr.in/assets/og-banner.png" },
     ],
     links: [
       { rel: "canonical", href: "https://mavr.in" },
@@ -51,6 +53,9 @@ function Index() {
   return (
     <main id="top" className="bg-[#0A0A0A] text-white overflow-x-hidden">
       <CinematicNavbar onJoin={scrollToWaitlist} />
+      <h1 style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+        Fitness App India for Serious Athletes — Track Workouts, Indian Food Nutrition and Connect with Your Trainer
+      </h1>
 
       {/* HERO — Cinematic */}
       <CinematicHero />
@@ -64,10 +69,10 @@ function Index() {
       {/* SECTION 2 — WHAT IS MAVR */}
       <Section id="about">
         <Reveal><Overline>THE ECOSYSTEM</Overline></Reveal>
-        <Reveal delay={100}><H2>One System. Three Pillars.</H2></Reveal>
+        <Reveal delay={100}><H2>One Operating System. Three Pillars.<br/>Built for Every Indian Athlete.</H2></Reveal>
         <Reveal delay={200}>
           <p className="text-[#888] max-w-2xl text-base md:text-lg mb-14">
-            MAVR is not a fitness app. It is the infrastructure layer for the Indian athlete — connecting training, nutrition, coaching, and community into a single operating system.
+            MAVR goes beyond every app built before it. India's athlete operating system — connecting your training, nutrition, coaching, and community into one system that actually understands how Indian athletes live and train.
           </p>
         </Reveal>
         <div className="grid md:grid-cols-3 gap-6">
@@ -99,7 +104,7 @@ function Index() {
         <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(5,5,5,0.85)_75%)]" />
         <div className="relative z-10 max-w-7xl mx-auto">
           <Reveal><Overline>THE PLATFORM</Overline></Reveal>
-          <Reveal delay={100}><H2>Everything an Indian Athlete Actually Needs.</H2></Reveal>
+          <Reveal delay={100}><H2>Everything India's Serious Athletes and Gym-Goers Have Been Waiting For.</H2></Reveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
             {[
               ["DASHBOARD", "Live date, time, trainer tag, current streak, today's workout card, macro summary. Your entire athletic life visible in one glance."],
@@ -256,7 +261,7 @@ function Index() {
             <div className="mx-auto w-[280px] h-[560px] bg-black border-[10px] border-[#1A1A1A] rounded-[40px] p-5 relative" style={{ boxShadow: "0 0 50px rgba(204,0,0,0.15)" }}>
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-[#1A1A1A] rounded-full" />
               <div className="h-full flex flex-col justify-center gap-5 pt-6">
-                <img src={logo} alt="" className="h-8 w-auto mx-auto" />
+                <img src={logo} alt="MAVR compression gear for Indian athletes — unlocks 6 months Pro app free" className="h-8 w-auto mx-auto" />
                 <div className="text-[10px] tracking-[0.3em] text-[#888] text-center">ENTER PRODUCT CODE</div>
                 <div className="bg-[#111] border border-[#333] rounded p-3 font-mono text-[#CC0000] text-center">MAVR-FOUND-8472</div>
                 <div className="text-center text-[#22c55e] text-2xl">✓</div>
@@ -387,7 +392,7 @@ function Index() {
                 "bottom-0 right-0 border-r-4 border-b-4",
               ].map(p => <div key={p} className={`absolute ${p} w-8 h-8 border-[#CC0000]`} />)}
               <div className="absolute inset-3 bg-[#111] grid place-items-center">
-                <img src={logo} alt="MAVR" className="h-20 w-auto opacity-60" />
+                <img src={logo} alt="MAVR fitness app for serious Indian athletes and gym-goers" className="h-20 w-auto opacity-60" />
               </div>
             </div>
           </Reveal>
@@ -426,7 +431,8 @@ function Index() {
       <section id="waitlist-final" className="relative py-28 md:py-40 px-6" style={{ background: "radial-gradient(ellipse at center, rgba(180,0,0,0.18), #0A0A0A 70%)" }}>
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <h2 className="font-display text-[60px] md:text-[96px] leading-[0.95]">THE WAITLIST<br />IS OPEN.</h2>
+            <h2 className="font-display text-[60px] md:text-[96px] leading-[0.95]">Join India's First Athlete<br/>Operating System.</h2>
+            <div className="text-[#cccccc] text-base md:text-lg mt-4">847 Founding Athletes Already Inside.</div>
           </Reveal>
           <Reveal delay={150}>
             <div className="text-[#cccccc] text-base md:text-lg mt-6 space-y-1">
@@ -458,15 +464,18 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2">
-              <img src={logo} alt="MAVR" className="h-8 w-auto" />
+              <img src={logo} alt="MAVR fitness app India — India's first athlete operating system" className="h-8 w-auto" />
               <span className="font-display text-2xl">MAVR</span>
             </div>
             <div className="text-[#888] text-[13px] mt-2">India's Athlete Operating System</div>
           </div>
           <div className="flex flex-wrap gap-4 text-[13px] text-[#888] md:justify-center">
-            {["Privacy Policy", "Terms of Service", "Contact", "Instagram", "LinkedIn"].map(l => (
-              <a key={l} href="#" className="hover:text-[#CC0000] transition-colors">{l}</a>
-            ))}
+            <a href="/privacy-policy" className="hover:text-[#CC0000] transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-[#CC0000] transition-colors">Terms of Use</a>
+            <a href="/refund-policy" className="hover:text-[#CC0000] transition-colors">Refund Policy</a>
+            <a href="mailto:hello@mavr.in" className="hover:text-[#CC0000] transition-colors">Contact</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#CC0000] transition-colors">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#CC0000] transition-colors">LinkedIn</a>
           </div>
           <div className="text-[#888] text-[11px] md:text-right">© 2025 MAVR Technologies Pvt. Ltd. All rights reserved. Built in India.</div>
         </div>
