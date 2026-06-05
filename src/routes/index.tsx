@@ -15,15 +15,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "MAVR — India's First Athlete Operating System" },
-      { name: "description", content: "MAVR is India's first complete athlete operating system. Track workouts, nutrition, connect with coaches, and earn achievements. Join the waitlist now." },
-      { name: "keywords", content: "Indian fitness app, athlete tracking app India, gym tracking app, trainer student app India, fitness app India" },
-      { property: "og:title", content: "MAVR — Train. Track. Dominate." },
-      { property: "og:description", content: "India's first athlete operating system is loading. Join 1,000 founding athletes." },
+      { name: "description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for. Track macros for dal, paneer, poha. Join 847+ athletes today." },
+      { name: "keywords", content: "fitness app India, Indian food macro tracker, personal trainer app India, workout tracking app, athlete operating system" },
+      { property: "og:title", content: "MAVR — India's First Athlete Operating System" },
+      { property: "og:description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://mavr.in" },
+      { property: "og:image", content: "https://www.mavr.in/assets/og-banner.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "MAVR — Train. Track. Dominate." },
-      { name: "twitter:description", content: "India's first athlete operating system is loading." },
+      { name: "twitter:title", content: "MAVR — India's First Athlete Operating System" },
+      { name: "twitter:description", content: "India's athlete operating system — the fitness app Indian gym-goers have been waiting for." },
+      { name: "twitter:image", content: "https://www.mavr.in/assets/og-banner.png" },
     ],
     links: [
       { rel: "canonical", href: "https://mavr.in" },
