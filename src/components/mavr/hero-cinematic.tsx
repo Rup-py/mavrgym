@@ -219,7 +219,7 @@ export function CinematicHero() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.8 }}
             className="mt-4 text-sm md:text-base text-white max-w-2xl font-body-barlow font-light leading-snug px-2"
           >
-            Training. Nutrition. Coach Connect. Achievements. Community. One platform built entirely for the Indian athlete.
+            Every fitness app was built for someone else. Not your food. Not your trainer. Not your gym. MAVR is India's athlete operating system — built entirely for the serious Indian athlete.
           </motion.p>
 
           {/* CTAs */}
