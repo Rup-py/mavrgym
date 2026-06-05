@@ -431,7 +431,8 @@ function Index() {
       <section id="waitlist-final" className="relative py-28 md:py-40 px-6" style={{ background: "radial-gradient(ellipse at center, rgba(180,0,0,0.18), #0A0A0A 70%)" }}>
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <h2 className="font-display text-[60px] md:text-[96px] leading-[0.95]">THE WAITLIST<br />IS OPEN.</h2>
+            <h2 className="font-display text-[60px] md:text-[96px] leading-[0.95]">Join India's First Athlete<br/>Operating System.</h2>
+            <div className="text-[#cccccc] text-base md:text-lg mt-4">847 Founding Athletes Already Inside.</div>
           </Reveal>
           <Reveal delay={150}>
             <div className="text-[#cccccc] text-base md:text-lg mt-6 space-y-1">
