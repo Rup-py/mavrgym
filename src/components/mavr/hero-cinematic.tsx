@@ -239,11 +239,6 @@ export function CinematicHero() {
             </a>
           </motion.div>
 
-          {/* Countdown */}
-          <motion.div {...fadeUp} transition={{ duration: 0.7, ease: "easeOut", delay: 1.2 }} className="mt-10 w-full">
-            <div className="text-[11px] tracking-[0.3em] text-white/70 mb-3 font-body-barlow">PUBLIC LAUNCH IN</div>
-            <Countdown />
-          </motion.div>
 
           {/* Stats row */}
           <motion.div
